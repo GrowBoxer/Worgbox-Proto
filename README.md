@@ -7,11 +7,28 @@ No need to explain you how we can travel there :]
 Main idea I want to make a compact and controlled box for growing something small in compact area and possible stealthy.
 
 ##Construction
-Dimensions 260mm x 260mm x 470mm
-Material is 6mm plywood
+- Dimensions 260mm x 260mm x 470mm.
+- Material is 6mm laser cutted plywood.
 
+##Components
+###Controller
+###Sensors
+###Light
+###Fans
+###Additional modules
+- SSR
 
 ##How It Work
+
+
+
+##Files
+- PlywoodLaserCut.dwg — 2d scheme of each plywood sheet for laser cutting in DWG format (AutoCAD).
+- Worgbox.max — 3d model of box in 3dsmax format;
+- wiring.xxx;
+- pcblayout.xxx;
+- worgbox.ino — arduino sketch;
+- data.csv — example of data recieved from controller;
 
 ###TO DO Construction
 - using bigger holles for wires (up to 5 mm diameter)
