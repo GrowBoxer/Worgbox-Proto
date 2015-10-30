@@ -12,15 +12,30 @@ Main idea I want to make a compact and controlled box for growing something smal
 
 ##Components
 ###Controller
+- Arduino UNO (Arduino Pro Mini)
 ###Sensors
+- DHT22 
+- DS18B20
 ###Light
+- 16x3W full spectrum LEDs
 ###Fans
+- 2x 12cm FANs (3x optional)
+- 
 ###Additional modules
-- SSR
+- ESP8266 WiFi Module
+- OLED 128x64 I2C display
+- 2x DC SSR
+- LED driver
+- precise clock
+- 3x buttonf for change settings
 
 ##How It Work
-
-
+Controller have 4 light modes: 24/0, 18/6 (default), 12/12 and 0/24 (hours of day/night). ON/OFF by SSR.
+Default time when night starts: 18:00.
+Default FANs speed: 50%. Regulated by PWM with SSR. At FAN SSR control PIN PWM frequency lower than standart.
+With buttons you can change this modes and parameters.
+OLED Display show main parameter, time also temperatures and humidity.
+WiFi module answer on request with JSON (current parameters, sensors data, etc.).
 
 ##Files
 - PlywoodLaserCut.dwg — 2d scheme of each plywood sheet for laser cutting in DWG format (AutoCAD).
@@ -28,7 +43,8 @@ Main idea I want to make a compact and controlled box for growing something smal
 - wiring.xxx;
 - pcblayout.xxx;
 - worgbox.ino — arduino sketch;
-- data.csv — example of data recieved from controller;
+- data.json — example of data recieved from controller;
+- data.csv — example of data sended to thingspeak;
 
 ###TO DO Construction
 - using bigger holles for wires (up to 5 mm diameter)
@@ -44,5 +60,11 @@ Main idea I want to make a compact and controlled box for growing something smal
 ###TO DO Software
 - analyze fans RPM;
 
-###Ideas
+###Ideas Components
 - migrate totally to ESP8266
+- different SSR relays for PWM control light and box fans (different RPM)
+
+###Ideas Construction
+- revision transparent acrylic window 
+- one-point lock for main door
+- put screws deeper (into first plywood layer)
