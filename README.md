@@ -11,17 +11,21 @@ Main idea I want to make a compact and controlled box for growing something smal
 - Material is 6mm laser cutted plywood.
 
 ##Components
+
 ###Controller
 - Arduino UNO (Arduino Pro Mini)
+
 ###Sensors
 - DHT22 
 - DS18B20
+
 ###Light
 - 16x3W full spectrum LEDs
+
 ###Fans
 - 2x 12cm FANs (3x optional)
-- 
-###Additional modules
+
+###Additional
 - ESP8266 WiFi Module
 - OLED 128x64 I2C display
 - 2x DC SSR
