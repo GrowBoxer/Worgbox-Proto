@@ -26,20 +26,20 @@ Main idea I want to make a compact and controlled box for growing something smal
 - 2x 12cm FANs (3x optional)
 
 ###Additional
-- ESP8266 WiFi Module
+- ESP8266 WiFi Module (ESP-01)
 - OLED 128x64 I2C display
 - 2x DC SSR
 - LED driver
-- precise clock
-- 3x buttonf for change settings
+- Precise clock module ds3231
+- 3x buttons for change settings
 
 ##How It Work
 Controller have 4 light modes: 24/0, 18/6 (default), 12/12 and 0/24 (hours of day/night). ON/OFF by SSR.
 Default time when night starts: 18:00.
-Default FANs speed: 50%. Regulated by PWM with SSR. At FAN SSR control PIN PWM frequency lower than standart.
+Default FANs speed: 90% when day, and 30% when night (range 30-95%). Regulated by PWM with SSR. At FAN SSR control PIN PWM frequency lower than standart.
 With buttons you can change this modes and parameters.
 OLED Display show main parameter, time also temperatures and humidity.
-WiFi module answer on request with JSON (current parameters, sensors data, etc.).
+WiFi module have IP and rining web server. Http request answer is JSON (current parameters, sensors data, etc.).
 
 ##Files
 - PlywoodLaserCut.dwg — 2d scheme of each plywood sheet for laser cutting in DWG format (AutoCAD).
@@ -50,13 +50,17 @@ WiFi module answer on request with JSON (current parameters, sensors data, etc.)
 - data.json — example of data recieved from controller;
 - data.csv — example of data sended to thingspeak;
 
+###TO DO Files
+- check DWG for actual changes
+- - need back door fan shift
+- - need solid plywood base for light compartment door
+
 ###TO DO Construction
 - using bigger holles for wires (up to 5 mm diameter)
 - separate high voltage and low voltage compartments;
 
-
 ###TO DO Hardware
-- kill the freezes and stop working of controller (need shield);
+- kill the freezes and stop working of controller (need shield? no other cause);
 - make PCB for working with Arduino Mini Pro;
 - setup temeprature sensor to the LED radiators;
 - read white wire data from the fans (for RPM analyze);
@@ -69,6 +73,7 @@ WiFi module answer on request with JSON (current parameters, sensors data, etc.)
 - different SSR relays for PWM control light and box fans (different RPM)
 
 ###Ideas Construction
-- revision transparent acrylic window 
-- one-point lock for main door
+- transparent acrylic window for revision of main area
+- one-point lock for main door (now have 4-point locks)
 - put screws deeper (into first plywood layer)
+- replace membrane buttons to the touch
